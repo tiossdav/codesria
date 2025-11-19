@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-caveat: "Caveat", cursive;
+  --font-lobster: "Lobster", cursive;
+  --font-raleway: "Raleway", sans-serif;
+}

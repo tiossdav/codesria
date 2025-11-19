@@ -1,54 +1,66 @@
-import { Globe, Lightbulb, Recycle, Users } from "lucide-react";
+import {
+  BadgeCheck,
+  CloudSun,
+  Globe,
+  Lightbulb,
+  Recycle,
+  Users,
+  Zap,
+} from "lucide-react";
 
 function Research() {
   return (
-    <div className="max-w-7xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 py-20">
+    <div className="max-w-7xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 py-20 font-inter">
       <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
         Research Focus Areas
       </h2>
       <p className="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-        'Pneuma-city' bridges formal and informal infrastructures by
-        conceptually tracing the role of tyres as 'frictional' within urban
-        contexts where automobile transport is hegemonic.
+        Explores the politics of renewable energy in the Lake Chad Basin,
+        examining how hydropower development, urban adaptation, and just
+        transitions reshape governance, social equity, and everyday life in
+        fragile African contexts.
       </p>
 
       <div className="grid md:grid-cols-3 gap-8 mb-16">
         <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-          <div className="bg-emerald-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-            <Users className="h-8 w-8 text-emerald-600" />
+          <div className="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <Zap className="h-8 w-8 text-blue-600" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Informal Cultures & Livelihoods
+            Renewable Energy Politics
           </h3>
           <p className="text-gray-600 leading-relaxed">
-            Examining the gendered informal cultures, livelihoods and
-            technologies of tyre-related work in urban contexts.
+            Explores how hydropower projects reshape state power, governance,
+            and decision-making in fragile Lake Chad Basin contexts experiencing
+            climate stress.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-          <div className="bg-teal-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-            <Globe className="h-8 w-8 text-teal-600" />
+          <div className="bg-emerald-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <BadgeCheck className="h-8 w-8 text-emerald-600" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Road Ecologies
+            Just Social Transitions
           </h3>
           <p className="text-gray-600 leading-relaxed">
-            Understanding the complex place of waste tyres in street and road
-            ecologies and their environmental impact.
+            Investigates gender, youth, and community impacts of energy shifts,
+            ensuring equitable, inclusive pathways that protect vulnerable
+            groups in changing environments.
           </p>
         </div>
 
         <div className="bg-white p-8 rounded-lg shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
           <div className="bg-amber-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
-            <Recycle className="h-8 w-8 text-amber-600" />
+            <CloudSun className="h-8 w-8 text-amber-600" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">
-            Circular Economies
+            Urban Climate Adaptation
           </h3>
           <p className="text-gray-600 leading-relaxed">
-            Exploring circular economy models and the innovative repurposing of
-            end-of-life tyres in urban settings.
+            Examines how cities respond to shrinking water resources and energy
+            transitions, transforming infrastructure, livelihoods, and everyday
+            survival strategies.
           </p>
         </div>
       </div>
@@ -59,10 +71,12 @@ function Research() {
           <div>
             <h3 className="text-3xl font-bold mb-4">Our Vision</h3>
             <p className="text-xl leading-relaxed">
-              We aim to put ELT challenges and opportunities at the heart of a
-              vision for a sustainable future, creating solutions that improve
-              well-being for both workers and residents in rapidly growing
-              African cities.
+              To be one of the topmost African non-profit organizations that
+              fosters innovative research and collaboration across disciplines,
+              generations, and geographical boundaries, empowering African
+              scholars and professionals to address complex global challenges
+              and contribute to the advancement of African/African Diaspora
+              studies and sustainable development in Africa and beyond!
             </p>
           </div>
         </div>

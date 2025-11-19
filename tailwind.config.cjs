@@ -2,7 +2,14 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        caveat: ["Caveat", "cursive"],
+        inter: ["Inter", "sans-serif"],
+        lobster: ["Lobster", "cursive"],
+        raleway: ["Raleway", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

@@ -31,14 +31,14 @@ const teamMembers = [
 
 function Team() {
   return (
-    <div className="max-w-7xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 py-20">
+    <div className="max-w-7xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 py-10 font-inter">
       <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
         Meet Our Team
       </h2>
-      <p className="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
+      {/* <p className="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
         Our interdisciplinary team combines expertise from engineering, social
         sciences, gender studies, and environmental sustainability
-      </p>
+      </p> */}
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         {teamMembers.map((member, index) => (
           <div

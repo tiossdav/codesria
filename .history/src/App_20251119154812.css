@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Tailwind imports for v4 (preflight + utilities). Using the v4 import paths
+	avoids the deprecated @tailwind directives that some toolchains report
+	as unknown. If you prefer to use @tailwind directives and your toolchain
+	supports them, swap these imports accordingly. */
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+/* Apply the imported font as the site's default. Adjust fallback stack as needed. */
+html, body {
+	font-family: 'Inter', 'Raleway', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* If you want a decorative header font (Caveat or Lobster), add utility classes or
+	 a bespoke selector instead of changing the global font. */

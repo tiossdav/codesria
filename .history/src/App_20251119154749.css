@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Tailwind layers (processed by PostCSS + tailwindcss) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply the imported font as the site's default. Adjust fallback stack as needed. */
+html, body {
+	font-family: 'Inter', 'Raleway', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* If you want a decorative header font (Caveat or Lobster), add utility classes or
+	 a bespoke selector instead of changing the global font. */

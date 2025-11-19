@@ -2,7 +2,7 @@ import { Mail, Target } from "lucide-react";
 
 function Contact() {
   return (
-    <div className="max-w-3xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 py-20">
+    <div className="max-w-3xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 py-10 font-inter">
       <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
         Get Involved
       </h2>
@@ -16,7 +16,7 @@ function Contact() {
             <Mail className="h-6 w-6 text-emerald-600 mt-1 mr-4 shrink-0" />
             <div>
               <h3 className="font-bold text-gray-900 mb-2 text-lg">Email Us</h3>
-              <p className="text-gray-600">contact@pneuma-city.org</p>
+              <p className="text-gray-600">graduateresearchclinic@gmail.com</p>
             </div>
           </div>
 
@@ -26,9 +26,7 @@ function Contact() {
               <h3 className="font-bold text-gray-900 mb-2 text-lg">
                 Research Location
               </h3>
-              <p className="text-gray-600">
-                Lagos, Nigeria & Partner Institutions
-              </p>
+              <p className="text-gray-600">Ibadan, Nigeria.</p>
             </div>
           </div>
 
