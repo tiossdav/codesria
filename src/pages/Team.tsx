@@ -1,31 +1,39 @@
+import pi from "./../assets/pi.jpg";
+import a_pi from "./../assets/a_pi.jpg";
+import team1 from "./../assets/team1.jpg";
+import team2 from "./../assets/team2.jpg";
+import team3 from "./../assets/team3.jpg";
+
 const teamMembers = [
   {
-    name: "Dr. Sarah Chen",
+    name: "Dr. SESAN Temilade",
     role: "Principal Investigator",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
-    bio: "Expert in sustainable urban development and environmental engineering",
+    image: pi,
+    bio: "Expert in Social Development",
   },
   {
-    name: "Dr. Marcus Johnson",
-    role: "Co-Investigator",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
-    bio: "Specializes in social sciences and informal economies research",
+    name: "Dr. ADEWUMI Tobi",
+    role: "Asst. Principal Investigator",
+    image: a_pi,
+    bio: "Specializes in Social Sciences and Urban Political Ecology",
   },
   {
-    name: "Dr. Aisha Patel",
+    name: "Dr. DAKYAGA Francis",
     role: "Research Fellow",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
-    bio: "Focus on gender studies and urban livelihoods",
+    image: team3,
+    bio: "",
   },
   {
-    name: "Alex Rivera",
-    role: "Research Assistant",
-    image:
-      "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&h=400&fit=crop",
-    bio: "Researching circular economy models and waste management systems",
+    name: "TEDONGMO Nedege",
+    role: "Research Fellow",
+    image: team2,
+    bio: "",
+  },
+  {
+    name: "POUNTOUGNIGNI Njuh",
+    role: "Research Fellow",
+    image: team1,
+    bio: "",
   },
 ];
 

@@ -7,6 +7,7 @@ import Research from "./pages/Research";
 import Team from "./pages/Team";
 import Publications from "./pages/Publications";
 import Contact from "./pages/Contact";
+import ContactForm from "./pages/ContactForm";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/team" component={Team} />
           <Route path="/publications" component={Publications} />
           <Route path="/contact" component={Contact} />
+          <Route path="/contact-form" component={ContactForm} />
 
           {/* 404 Route */}
           <Route>

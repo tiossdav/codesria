@@ -26,7 +26,8 @@ export default function Home() {
           <div className="max-w-7xl mx-auto w-full">
             <div className="max-w-3xl">
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Hydro-Power S(hr)inking State: Renewable energy in Lake Chad
+                Hydro-Power, S(hr)inking State? Gender and Politics of Renewable
+                Energy in the Lake Chad Basin{" "}
               </h1>
               <p className="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed">
                 This research explores Lake Chad’s environmental crisis,

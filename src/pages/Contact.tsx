@@ -1,6 +1,12 @@
 import { Mail, Target } from "lucide-react";
+import { useLocation } from "wouter";
 
 function Contact() {
+  const [, navigate] = useLocation();
+
+  const handleInquiry = () => {
+    navigate("/contact-form");
+  };
   return (
     <div className="max-w-3xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 py-20 font-inter">
       <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
@@ -39,7 +45,10 @@ function Contact() {
               government agencies, and community organizations working on
               sustainable urban development and circular economy initiatives.
             </p>
-            <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-4 rounded-md font-semibold transition-colors">
+            <button
+              onClick={handleInquiry}
+              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-4 rounded-md font-semibold transition-colors"
+            >
               Send Inquiry
             </button>
           </div>
