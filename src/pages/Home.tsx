@@ -1,10 +1,11 @@
 import { useLocation } from "wouter";
-import power from "../assets/power.jpg";
+import aerial from "../assets/aerial.mp4";
 import About from "./About";
 import Research from "./Research";
 import Publications from "./Publications";
 import Team from "./Team";
 import Contact from "./Contact";
+import Gallery from "./Gallery";
 
 export default function Home() {
   const [, setLocation] = useLocation();
@@ -14,12 +15,16 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative h-screen mt-20 font-inter">
         <div className="absolute inset-0">
-          <img
-            src={power}
-            alt="Urban African street"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src={aerial} type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/40 to-black/70"></div>
         </div>
 
         <div className="relative h-full flex items-center px-4">
@@ -39,13 +44,13 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   onClick={() => setLocation("/obj")}
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-md font-semibold text-lg transition-colors"
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-md font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                 >
                   Learn More
                 </button>
                 <button
                   onClick={() => setLocation("/research")}
-                  className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-md font-semibold text-lg transition-all"
+                  className="bg-white/10 backdrop-blur-sm hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-md font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                 >
                   Our Research
                 </button>
@@ -57,6 +62,7 @@ export default function Home() {
 
       {/* All Sections Below Hero */}
       <About />
+      <Gallery />
       <Research />
       <Publications />
       <Team />

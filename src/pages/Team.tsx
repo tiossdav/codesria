@@ -10,30 +10,36 @@ const teamMembers = [
     role: "Principal Investigator",
     image: pi,
     bio: "Expert in Social Development",
+    institute: "University of Ibadan, Nigeria",
   },
   {
-    name: "Dr. ADEWUMI Tobi",
+    name: "Dr. ADÉWÙNMÍ (TOBI) OLÚWATÓBILÓBA ",
     role: "Asst. Principal Investigator",
     image: a_pi,
     bio: "Specializes in Social Sciences and Urban Political Ecology",
+    institute: "University of Illinois, USA",
   },
   {
     name: "Dr. DAKYAGA Francis",
     role: "Research Fellow",
     image: team3,
-    bio: "",
+    bio: "Expertise in Governance and Social Identity Dynamics",
+    institute:
+      "SD Dombo University of Business and Integrated Development Studies, Wa, Ghana",
   },
   {
-    name: "TEDONGMO Nedege",
+    name: "TEDONGMO Ludvin Nadège",
     role: "Research Fellow",
     image: team2,
-    bio: "",
+    bio: "Specializes in Peace and Security Studies and Policy and Institutional Dynamics in Africa",
+    institute: "University of Dschang, Dschang,Cameroon",
   },
   {
-    name: "POUNTOUGNIGNI Njuh",
+    name: "POUNTOUGNIGNI Ludovic Njuh",
     role: "Research Fellow",
     image: team1,
-    bio: "",
+    bio: "Specializes in African Regionalism & Integration and Political Economy",
+    institute: "University of Ziguinchor Senegal",
   },
 ];
 
@@ -43,21 +49,22 @@ function Team() {
       <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
         Meet Our Team
       </h2>
-      {/* <p className="text-xl text-gray-600 mb-12 text-center max-w-3xl mx-auto">
-        Our interdisciplinary team combines expertise from engineering, social
-        sciences, gender studies, and environmental sustainability
-      </p> */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div className="grid gap-8 grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow"
+            className="bg-white rounded-lg shadow-lg border border-gray-100 
+                       overflow-hidden transform transition-all duration-500 ease-in-out
+                       hover:shadow-2xl hover:-translate-y-2"
           >
-            <img
-              src={member.image}
-              alt={member.name}
-              className="w-full h-64 object-cover"
-            />
+            <div className="overflow-hidden">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-64 object-cover transform transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+            </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-1">
                 {member.name}
