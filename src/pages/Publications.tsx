@@ -2,24 +2,52 @@ import { ExternalLink } from "lucide-react";
 
 const publications = [
   {
-    title: "End-of-Life Tyres in African Urban Contexts",
-    authors: "Chen, S., Johnson, M., Patel, A.",
+    title:
+      "Nigeria’s chronic power shortages: mini grids were going to crack the problem for rural people, but they haven’t. Here’s why.",
+    authors: "Sesan, T.",
     journal: "Environmental Science & Policy",
     year: "2024",
-    link: "#",
+    link: "  https://theconversation.com/nigerias-chronic-power-shortages-mini-grids-were-going-to-crack-the-problem-for-rural-people-but-they-havent-heres-why-233363",
   },
   {
-    title: "Gendered Informal Economies: Tyre Repair Work in Lagos",
-    authors: "Patel, A., Johnson, M., Chen, S.",
+    title:
+      "Strengthening commercial viability through greater inclusiveness in rural mini-grid deployment: Insights from Nigeria and Kenya.",
+    authors:
+      "Sesan, T., Fajardo, A., Baker, L., Uduka, U., Kausya, M., Kerr, D., Onsongo, D., Ugwu, O., Eleri, E. & Bhattacharyya, S.",
     journal: "Urban Studies",
     year: "2024",
     link: "#",
   },
   {
-    title: "Circular Economy Solutions for Urban Waste",
-    authors: "Chen, S., Rivera, A.",
+    title:
+      "Urban housing journeys: Collaborative housing configurations for improving access to housing.",
+    authors: "Dakyaga, F., Bagson, E., & Sillim, M. L. ",
+    journal: "Sustainability Journal",
+    year: "2025",
+    link: "#",
+  },
+  {
+    title:
+      "Cameroon Facing Post-Cold War Security Requirements (1990–2013),” in POKAM KAMDEM",
+    authors: "Nadège Ludvine TEDONGMO & Thierry DJIFACK",
+    journal: "Sustainability Journal",
+    year: "2020",
+    link: "#",
+  },
+  {
+    title:
+      "Misgovernance of Natural Resources, Identity Disputes, and Maritime Violence in the Gulf of Guinea,” in Extremisms, Wars, Peace, and Development in Africa Since Independence",
+    authors: "Nadège Ludvine TEDONGMO",
     journal: "Sustainability Journal",
     year: "2023",
+    link: "#",
+  },
+  {
+    title:
+      " forthcoming. Of Tyres, Temporalities, Teams and In-betweens in an African Mega-city: Reflections of an Early Career Researcher on the Pneumacity project. African Cities Blog",
+    authors: "Adewunmi, O.",
+    journal: "Sustainability Journal",
+    year: "2022",
     link: "#",
   },
 ];
@@ -40,9 +68,7 @@ function Publications() {
               {pub.title}
             </h3>
             <p className="text-gray-600 mb-2">{pub.authors}</p>
-            <p className="text-emerald-600 font-semibold mb-4">
-              {pub.journal} ({pub.year})
-            </p>
+            <p className="text-emerald-600 font-semibold mb-4">{pub.year}</p>
             <a
               href={pub.link}
               className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium"
