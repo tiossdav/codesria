@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -9,6 +10,8 @@ function ContactForm() {
   });
 
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   interface ContactFormData {
     name: string;
@@ -27,25 +30,51 @@ function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ): Promise<void> => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setError("");
 
-    // Show success message
-    setShowSuccess(true);
+    try {
+      // Replace these with your EmailJS credentials
+      // Get them from https://www.emailjs.com/
+      const result = await emailjs.send(
+        "service_fce2ekn", // Get from EmailJS dashboard
+        "template_jth5jwa", // Get from EmailJS dashboard
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          contact_method: formData.contactMethod,
+        },
+        "SGL3R5DB8HuSCMWqG" // Get from EmailJS dashboard
+      );
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-      contactMethod: "email",
-    });
+      console.log("Email sent successfully:", result);
 
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      setShowSuccess(false);
-    }, 5000);
+      // Show success message
+      setShowSuccess(true);
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+        contactMethod: "email",
+      });
+
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 5000);
+    } catch (err) {
+      console.error("Failed to send email:", err);
+      setError("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -62,6 +91,13 @@ function ContactForm() {
 
         {/* Form */}
         <form className="px-8 py-8 space-y-6" onSubmit={handleSubmit}>
+          {/* Error Message */}
+          {error && (
+            <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700">
+              {error}
+            </div>
+          )}
+
           {/* Name Field */}
           <div>
             <label
@@ -77,7 +113,8 @@ function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-1 outline-none transition-all"
+              disabled={isSubmitting}
+              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-1 outline-none transition-all disabled:bg-gray-100 disabled:cursor-not-allowed"
               placeholder="John Doe"
             />
           </div>
@@ -97,7 +134,8 @@ function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-1 outline-none transition-all"
+              disabled={isSubmitting}
+              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-1 outline-none transition-all disabled:bg-gray-100 disabled:cursor-not-allowed"
               placeholder="john.doe@example.com"
             />
           </div>
@@ -113,10 +151,13 @@ function ContactForm() {
             <textarea
               id="message"
               name="message"
+              rows={6}
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-1 outline-none transition-all"
+              minLength={10}
+              disabled={isSubmitting}
+              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-1 outline-none transition-all disabled:bg-gray-100 disabled:cursor-not-allowed resize-none"
               placeholder="Please provide details about your inquiry..."
             ></textarea>
             <p className="text-sm text-gray-500 mt-2">Minimum 10 characters</p>
@@ -126,9 +167,36 @@ function ContactForm() {
           <div className="pt-4">
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
+              disabled={isSubmitting}
+              className="w-full px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-all shadow-lg hover:shadow-xl disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
-              Submit Inquiry
+              {isSubmitting ? (
+                <>
+                  <svg
+                    className="animate-spin h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
+                  </svg>
+                  Sending...
+                </>
+              ) : (
+                "Submit Inquiry"
+              )}
             </button>
           </div>
         </form>
