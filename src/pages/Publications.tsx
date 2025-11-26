@@ -71,6 +71,8 @@ function Publications() {
             <p className="text-emerald-600 font-semibold mb-4">{pub.year}</p>
             <a
               href={pub.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium"
             >
               Read Full Paper <ExternalLink className="ml-2 h-4 w-4" />
