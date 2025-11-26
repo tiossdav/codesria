@@ -70,7 +70,9 @@ function Publications() {
             <p className="text-gray-600 mb-2">{pub.authors}</p>
             <p className="text-emerald-600 font-semibold mb-4">{pub.year}</p>
             <a
-              href={pub.link}
+              href={
+                pub.link && pub.link !== "#" ? pub.link : window.location.href
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-emerald-600 hover:text-emerald-700 font-medium"
