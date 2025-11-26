@@ -44,7 +44,7 @@ const publications = [
   },
   {
     title:
-      " forthcoming. Of Tyres, Temporalities, Teams and In-betweens in an African Mega-city: Reflections of an Early Career Researcher on the Pneumacity project. African Cities Blog",
+      "Forthcoming of Tyres, Temporalities, Teams and In-betweens in an African Mega-city: Reflections of an Early Career Researcher on the Pneumacity project. African Cities Blog",
     authors: "Adewunmi, O.",
     journal: "Sustainability Journal",
     year: "2022",

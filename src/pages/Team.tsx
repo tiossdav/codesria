@@ -13,7 +13,7 @@ const teamMembers = [
     institute: "University of Ibadan, Nigeria",
   },
   {
-    name: "Dr. ADÉWÙNMÍ (TOBI) OLÚWATÓBILÓBA ",
+    name: "ADÉWÙNMÍ (TOBI) OLÚWATÓBILÓBA ",
     role: "Asst. Principal Investigator",
     image: a_pi,
     bio: "Specializes in Social Sciences and Urban Political Ecology",

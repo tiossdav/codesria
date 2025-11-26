@@ -4,11 +4,11 @@ function About() {
       <h2 className="text-4xl font-bold text-gray-900 mb-8">About</h2>
       <div className="prose prose-lg max-w-none">
         <p className="text-xl text-gray-700 leading-relaxed mb-6">
-          Hydro Power, S(hr)inking States? Politics of Renewable Energy, Just
-          Transitions and Urban Sustainability in the Lake Chad Basin is a
-          collaborative, transdisciplinary research initiative that responds to
-          one of Africa’s most pressing environmental challenges: the rapid
-          shrinkage of Lake Chad and its far-reaching impacts on state
+          Hydro-Power, S(hr)inking State? Gender and Politics of Renewable
+          Energy, Just Transitions and Urban Sustainability in the Lake Chad
+          Basin is a collaborative, transdisciplinary research initiative that
+          responds to one of Africa’s most pressing environmental challenges:
+          the rapid shrinkage of Lake Chad and its far-reaching impacts on state
           stability, urban life, and energy futures.
         </p>
         <p className="text-xl text-gray-700 leading-relaxed mb-8">
