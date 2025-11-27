@@ -27,9 +27,9 @@ export default function Home() {
           <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/40 to-black/70"></div>
         </div>
 
-        <div className="relative h-full flex items-center px-4">
+        <div className="relative w-full h-full flex items-center px-4">
           <div className="max-w-7xl mx-auto w-full">
-            <div className="max-w-3xl">
+            <div className="w-full flex flex-col items-center text-center ">
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 Hydro-Power, S(hr)inking State? Gender and Politics of Renewable
                 Energy in the Lake Chad Basin{" "}
