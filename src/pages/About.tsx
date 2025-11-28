@@ -1,7 +1,9 @@
 function About() {
   return (
     <div className="max-w-5xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 py-20 font-inter">
-      <h2 className="text-4xl font-bold text-gray-900 mb-8">About</h2>
+      <h2 className="text-4xl text-center font-bold text-gray-900 mb-8">
+        About
+      </h2>
       <div className="prose prose-lg max-w-none">
         <p className="text-xl text-gray-700 leading-relaxed mb-6">
           Hydro-Power, S(hr)inking State? Gender and Politics of Renewable

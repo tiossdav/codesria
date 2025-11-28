@@ -8,7 +8,7 @@ function Contact() {
     navigate("/contact-form");
   };
   return (
-    <div className="max-w-3xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 py-20 font-inter">
+    <div className="max-w-3xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 pt-20 font-inter">
       <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
         Get Involved
       </h2>

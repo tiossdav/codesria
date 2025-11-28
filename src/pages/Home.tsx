@@ -31,15 +31,14 @@ export default function Home() {
           <div className="max-w-7xl mx-auto w-full">
             <div className="w-full flex flex-col items-center text-center ">
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                Hydro-Power, S(hr)inking State? Gender and Politics of Renewable
-                Energy in the Lake Chad Basin{" "}
+                Gender + Politics of Renewable Energy in the Lake Chad Region
               </h1>
               <p className="text-xl md:text-2xl text-gray-100 mb-8 leading-relaxed">
                 This research explores Lake Chad’s environmental crisis,
                 analyzing hydropower, urban adaptation, gender equity, and just
-                transition through comparative, mixed-method studies across Chad
-                and Nigeria to inform inclusive, sustainable governance and
-                development.
+                transition through comparative, mixed-method studies across
+                Nigeria and Cameroon to inform inclusive, sustainable governance
+                and development.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button

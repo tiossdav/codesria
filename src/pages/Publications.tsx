@@ -44,17 +44,17 @@ const publications = [
   },
   {
     title:
-      "Forthcoming of Tyres, Temporalities, Teams and In-betweens in an African Mega-city: Reflections of an Early Career Researcher on the Pneumacity project. African Cities Blog",
+      "Between Climate Change Narratives and Policy Actions: The Choice of Developing a Sustainable Development Agenda for Nigeria",
     authors: "Adewunmi, O.",
     journal: "Sustainability Journal",
     year: "2022",
-    link: "#",
+    link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2673505",
   },
 ];
 
 function Publications() {
   return (
-    <div className="max-w-5xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 py-20 font-inter">
+    <div className="max-w-5xl mx-auto mt-8 px-4 sm:px-6 lg:px-8 pt-20 font-inter">
       <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
         Publications & Research Outputs
       </h2>
